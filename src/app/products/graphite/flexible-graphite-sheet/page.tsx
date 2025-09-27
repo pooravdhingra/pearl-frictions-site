@@ -23,17 +23,17 @@ const rows: [string, string][] = [
 export default function FlexibleGraphiteSheet() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10">
-        
+
         <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },
-          { label: "Cork", href: "/products/cork" },
-          { label: "Antivibration Cork Sheet" },
+          { label: "Graphite", href: "/products/graphite" },
+          { label: "Flexible Graphite Sheet" },
         ]}
       />
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="mt-4 grid gap-8 md:grid-cols-2">
         <ProductGallery images={images} />
         <div>
           <h1 className="text-3xl font-semibold tracking-tight">Flexible Graphite Sheet (Rolls)</h1>

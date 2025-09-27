@@ -31,11 +31,11 @@ export default function RubberisedCorkSheet() {
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },
           { label: "Cork", href: "/products/cork" },
-          { label: "Antivibration Cork Sheet" },
+          { label: "Rubberised Cork Sheet" },
         ]}
       />
       
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="mt-4 grid gap-8 md:grid-cols-2">
         <ProductGallery images={images} />
         <div>
           <h1 className="text-3xl font-semibold tracking-tight">Rubberised Cork Sheet</h1>
