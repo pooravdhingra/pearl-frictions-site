@@ -134,7 +134,6 @@ export default function ContactPage() {
       {/* LocalBusiness structured data for better SEO */}
       <script
         type="application/ld+json"
-        // @ts-ignore
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
