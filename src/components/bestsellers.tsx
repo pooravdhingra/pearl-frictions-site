@@ -3,25 +3,27 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const items = [
+type Item = { name: string; href: string; img: string };
+
+const defaultItems: Item[] = [
   {
-    name: "Cork Sheet",
-    href: "/products/cork/cork-sheet",
-    img: "/products/cork-sheet.jpg",
+    name: "Antivibration Cork Sheet",
+    href: "/products/cork/antivibration-cork-sheet",
+    img: "/products/antivibration-cork-sheet/1.jpg",
   },
   {
     name: "Rubberised Cork Sheet",
     href: "/products/cork/rubberised-cork-sheet",
-    img: "/products/rubberised-cork.jpg",
+    img: "/products/rubberised-cork-sheet/1.jpg",
   },
   {
-    name: "Flexible Graphite Sheet",
+    name: "Flexible Graphite Sheet (Rolls)",
     href: "/products/graphite/flexible-graphite-sheet",
-    img: "/products/flexible-graphite.jpg",
+    img: "/products/flexible-graphite-sheet/1.jpg",
   },
 ];
 
-export function Bestsellers() {
+export function Bestsellers({ items = defaultItems }: { items?: Item[] }) {
   return (
     <section className="bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 py-14">
@@ -35,7 +37,7 @@ export function Bestsellers() {
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((p) => (
             <Link key={p.href} href={p.href}>
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="overflow-hidden hover:shadow-lg transition">
                 <div className="relative aspect-[4/3]">
                   <Image src={p.img} alt={p.name} fill className="object-cover" />
                 </div>
