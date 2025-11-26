@@ -16,7 +16,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Pearl Frictions logo"
               width={40}
               height={40}
