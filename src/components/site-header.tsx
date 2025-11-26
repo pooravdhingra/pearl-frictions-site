@@ -3,14 +3,6 @@
 import Link from "next/link";
 import { COMPANY, WHATSAPP_LINK } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-  NavigationMenuLink,
-} from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { PhoneCall, Menu, MessageCircle } from "lucide-react";
 
@@ -33,57 +25,14 @@ export function SiteHeader() {
             Home
           </Link>
 
-          {/* About: clickable + hoverable dropdown */}
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem className="group relative">
-                {/* Trigger opens dropdown on hover/focus */}
-                <NavigationMenuTrigger className="text-sm group-hover:bg-muted/60">
-                  About Us
-                </NavigationMenuTrigger>
-
-                {/* Overlay link makes whole trigger clickable to Company Profile */}
-                <Link
-                  href="/about/company-profile"
-                  className="absolute left-0 top-0 h-[var(--radix-navigation-menu-trigger-height)] w-[var(--radix-navigation-menu-trigger-width)]"
-                  aria-label="Go to Company Profile"
-                />
-
-                <NavigationMenuContent>
-                  <div className="grid w-[280px] gap-2 p-4">
-                    <Link href="/about/company-profile" legacyBehavior passHref>
-                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
-                        Company Profile
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/about/product-profile" legacyBehavior passHref>
-                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
-                        Product Profile
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link href="/about/quality" legacyBehavior passHref>
-                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
-                        Quality
-                      </NavigationMenuLink>
-                    </Link>
-                    <Link
-                      href="/about/infrastructure-and-facilities"
-                      legacyBehavior
-                      passHref
-                    >
-                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
-                        Infrastructure &amp; Facilities
-                      </NavigationMenuLink>
-                    </Link>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
           <Link href="/products" className="text-sm hover:underline underline-offset-4">
             Products
           </Link>
+
+          <Link href="/about/company-profile" className="text-sm hover:underline underline-offset-4">
+            About Us
+          </Link>
+
           <Link href="/contact" className="text-sm hover:underline underline-offset-4">
             Contact Us
           </Link>
@@ -118,6 +67,10 @@ export function SiteHeader() {
                   Home
                 </Link>
 
+                <Link href="/products" className="py-1">
+                  Products
+                </Link>
+
                 {/* Default About link goes to Company Profile; include sublinks */}
                 <Link href="/about/company-profile" className="py-1">
                   About Us
@@ -137,9 +90,6 @@ export function SiteHeader() {
                   </Link>
                 </div>
 
-                <Link href="/products" className="py-1">
-                  Products
-                </Link>
                 <Link href="/contact" className="py-1">
                   Contact Us
                 </Link>
