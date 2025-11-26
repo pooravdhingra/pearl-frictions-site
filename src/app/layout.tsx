@@ -8,7 +8,7 @@ import { WhatsAppFloat } from "@/components/whatsapp-float";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pearl Frictions | Cork & Graphite Products",
+  title: "Pearl Frictions | Cork, Graphite, Asbestos, Fiber, Rubber",
   description:
     "Established in 1962, Pearl Frictions manufactures and exports cork, graphite, and asbestos sealing products for industrial and automotive applications.",
   metadataBase: new URL("https://www.example.com"), // update after domain is live
