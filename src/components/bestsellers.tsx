@@ -7,19 +7,29 @@ type Item = { name: string; href: string; img: string };
 
 const defaultItems: Item[] = [
   {
-    name: "Antivibration Cork Sheet",
-    href: "/products/cork/antivibration-cork-sheet",
-    img: "/products/antivibration-cork-sheet/1.jpg",
-  },
-  {
-    name: "Rubberised Cork Sheet",
-    href: "/products/cork/rubberised-cork-sheet",
-    img: "/products/rubberised-cork-sheet/1.jpg",
-  },
-  {
-    name: "Flexible Graphite Sheet (Rolls)",
+    name: "Flexible Graphite Rolls",
     href: "/products/graphite/flexible-graphite-sheet",
     img: "/products/flexible-graphite-sheet/1.jpg",
+  },
+  {
+    name: "Cork Granules",
+    href: "/products/cork/cork-granules",
+    img: "/products/cork-granules/1.jpg",
+  },
+  {
+    name: "Composite Mineral Fiber",
+    href: "/products/non-asbestos-fibers/composite-mineral-fiber",
+    img: "/products/composite-mineral-fiber/1.jpg",
+  },
+  {
+    name: "Asbestos Fiber",
+    href: "/products/asbestos/chrysotile-asbestos-fiber",
+    img: "/products/chrysotile-asbestos-fiber/1.jpg",
+  },
+  {
+    name: "Rubber Cork Sheets",
+    href: "/products/cork/rubberised-cork-sheet",
+    img: "/products/rubberised-cork-sheet/1.jpg",
   },
 ];
 
