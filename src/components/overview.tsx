@@ -19,13 +19,31 @@ export function Overview() {
           />
         </div>
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight">Welcome to Pearl Frictions Inc.</h2>
+          <h2 className="text-2xl font-semibold tracking-tight">
+            Welcome to Pearl Frictions Inc.
+          </h2>
+
+          {/* always visible intro paragraph */}
           <p className="mt-3 text-sm text-muted-foreground">
-            Established in the year 1962, Pearl Frictions is engaged in manufacturing and exporting quality Cork and Asbestos Products. Our range includes Ceramic Packings, Cellulose Paper, Spiral Wound Gaskets, Cylinder Head Gaskets, Ceramic Yarn, Ceramic Rope, Ceramic Cloth, Ceramic Tape, Cellulose Paper, Ceramic Sealings, Asbestos Fiber, Glass Fiber, Graphite Sheet, Asbestos Millboard Sheet, Asbestos Yarn, Asbestos Rope, Asbestos Tape, asbestos cloth, glass rope, glass yarn, glass tape, glass cloth, c.a.f. jointing sheet, grafoil, asbestos textile products, flexible graphite sheets, flexible graphite rolls, flexible grafoil sheets, flexible grafoil rolls, cork products, cork stopper, cork granules, cork sheet, plain cork sheet, rubberised cork sheet and cork slab. Apart from manufacturing Cork and Asbestos Products, we also offer our clients Non-Polluting Non-Asbestos Products, Gaskets, Plant & Machinery and CEMJO Material.
+            Established by our father, <strong>Mr. Ramesh Dhingra</strong> in the year 1962, Pearl
+            Frictions Inc. is engaged in importing and manufacturing quality raw materials for
+            Automotive, Steel, Insulation &amp; allied industries. Our range includes Cork Products,
+            Graphite Materials, Non-Asbestos Sealing &amp; Packings, Asbestos &amp; Non Asbestos
+            Fibers, Mineral Fibers, NBR Rubber Bales &amp; speciality powders etc.
           </p>
 
+          {/* extra detail on toggle */}
           <div className={`${expanded ? "block" : "hidden"} mt-3 text-sm text-muted-foreground`}>
-            Our range of products is appreciated for features such as light in weight, imputrescible, impervious to liquids and gases, dimensional stability and thermal and acoustic insulation. These widely cater to the requirements of Engineering and Automotive sectors. Our modern manufacturing unit is well equipped with latest machines that help us to manufacture our range of products in an effectual manner. These Asbestos and Cork Products can be customized to meet the requirements of our clients.
+            <p>
+              Our range of products is appreciated for features such as high purity, light
+              densities, maximum resistance to liquids and gases, dimensional stability, very low
+              loss of energy, and thermal and acoustic insulation.
+            </p>
+            <p className="mt-3">
+              Our modern manufacturing unit is well equipped with latest machines that help us to
+              manufacture our customized range of products, best suited to meet the requirements of
+              our esteemed clients.
+            </p>
           </div>
 
           <div className="mt-4">

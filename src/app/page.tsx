@@ -22,11 +22,11 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 py-24 sm:py-28 lg:py-32 text-white">
             <div className="inline-block max-w-2xl rounded-xl bg-black/40 backdrop-blur-sm p-6">
               <h1 className="text-3xl sm:text-5xl font-semibold leading-tight drop-shadow">
-                Precision Friction Materials since 1962
+                Raw Materials for Friction, Sealing &amp; Insulation Industries since 1962
               </h1>
               <p className="mt-4 text-base sm:text-lg">
-                Cork, graphite, and non-asbestos sealing products for engineering and automotive
-                sectors—manufactured to rigorous quality standards.
+                Cork, Graphite, Asbestos, Rubber and Fibre products manufactured to rigorous quality
+                standards
               </p>
               <div className="mt-8 flex gap-3">
                 <Link href="/products">

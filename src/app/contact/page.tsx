@@ -7,8 +7,8 @@ import { Mail, PhoneCall, MessageCircle, MapPin, CheckCircle2 } from "lucide-rea
 function Bullets() {
   const points = [
     "Quick responses from our sales desk",
-    "Ready stock on popular grades",
-    "Technical guidance for the right material",
+    "Guidance on selecting the right raw material",
+    "Support for automotive, steel, insulation & allied industries",
     "Request a quote in minutes",
   ];
   return (
@@ -26,7 +26,7 @@ function Bullets() {
 export default function ContactPage() {
   const mapQuery = encodeURIComponent(
     [
-      // omit the first line (person’s name) for better geocoding
+      // omit the director line for better geocoding
       COMPANY.addressLines[1],
       COMPANY.addressLines[2],
       COMPANY.addressLines[3],
@@ -38,7 +38,7 @@ export default function ContactPage() {
       <header className="mb-8">
         <h1 className="text-3xl font-semibold tracking-tight">Contact Us</h1>
         <p className="mt-2 text-muted-foreground">
-          We’re here to help with product recommendations, pricing, and delivery timelines.
+          We’re here to help with product recommendations, pricing, logistics and technical queries.
         </p>
         <Bullets />
       </header>
@@ -46,6 +46,7 @@ export default function ContactPage() {
       <div className="grid gap-8 lg:grid-cols-[1.1fr,1fr]">
         {/* Left column: contact blocks */}
         <div className="space-y-6">
+          {/* Location */}
           <Card className="p-6 hover:shadow-md transition">
             <div className="flex items-start gap-3">
               <MapPin className="mt-1 h-5 w-5" />
@@ -63,48 +64,78 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Open in Google Maps →
+                    Directions on Google Maps →
                   </Link>
                 </div>
               </div>
             </div>
           </Card>
 
+          {/* Contact summary */}
           <Card className="p-6 hover:shadow-md transition">
             <div className="flex items-start gap-3">
               <Mail className="mt-1 h-5 w-5" />
               <div>
-                <h2 className="text-lg font-medium">Email</h2>
-                <div className="mt-2 text-sm">
-                  <a
-                    className="underline underline-offset-4"
-                    href={`mailto:${COMPANY.email}`}
-                  >
-                    {COMPANY.email}
-                  </a>
+                <h2 className="text-lg font-medium">Contact</h2>
+                <div className="mt-2 text-sm space-y-1">
+                  <div>
+                    Email:{" "}
+                    <a
+                      className="underline underline-offset-4"
+                      href={`mailto:${COMPANY.email}`}
+                    >
+                      {COMPANY.email}
+                    </a>
+                  </div>
+                  <div>
+                    Phone (Mobile):{" "}
+                    <a
+                      className="underline underline-offset-4"
+                      href={`tel:+${COMPANY.phoneMobileE164}`}
+                    >
+                      {COMPANY.phoneMobileDisplay}
+                    </a>
+                  </div>
+                  <div>
+                    Phone (Landline):{" "}
+                    <a
+                      className="underline underline-offset-4"
+                      href={`tel:+${COMPANY.phoneLandlineE164}`}
+                    >
+                      {COMPANY.phoneLandlineDisplay}
+                    </a>
+                  </div>
+                  <div>
+                    WhatsApp:{" "}
+                    <a
+                      className="underline underline-offset-4"
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Chat with Us
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </Card>
 
+          {/* Call / WhatsApp CTAs */}
           <Card className="p-6 hover:shadow-md transition">
             <div className="flex items-start gap-3">
               <PhoneCall className="mt-1 h-5 w-5" />
               <div>
-                <h2 className="text-lg font-medium">Phone</h2>
-                <div className="mt-2 text-sm">
-                  <a
-                    className="underline underline-offset-4"
-                    href={`tel:${COMPANY.phoneE164}`}
-                  >
-                    {COMPANY.phoneDisplay}
-                  </a>
-                </div>
+                <h2 className="text-lg font-medium">Talk to Us</h2>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Connect directly with our team for availability, technical details, or shipment
+                  timelines.
+                </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  <a href={`tel:${COMPANY.phoneE164}`}>
+                  <a href={`tel:+${COMPANY.phoneMobileE164}`}>
                     <Button size="sm" variant="outline" className="gap-2">
                       <PhoneCall className="h-4 w-4" />
-                      Call Now
+                      Call (Mobile)
                     </Button>
                   </a>
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -139,17 +170,17 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: COMPANY.name,
-            telephone: `+${COMPANY.phoneE164}`,
+            telephone: `+${COMPANY.phoneMobileE164}`,
             email: COMPANY.email,
             address: {
               "@type": "PostalAddress",
-              streetAddress: "28/19, West Patel Nagar, Patel Nagar",
+              streetAddress: "26/181-C, Farid Puri, West Patel Nagar",
               addressLocality: "New Delhi",
               postalCode: "110008",
               addressRegion: "Delhi",
               addressCountry: "IN",
             },
-            url: "https://www.example.com/contact", // update with live domain
+            url: "https://www.example.com/contact", // update with live domain later
             sameAs: [WHATSAPP_LINK],
           }),
         }}

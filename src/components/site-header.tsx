@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { COMPANY, WHATSAPP_LINK } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,66 +15,66 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { PhoneCall, Menu, MessageCircle } from "lucide-react";
 
 export function SiteHeader() {
-  const router = useRouter();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         {/* Logo / Brand */}
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded bg-black" aria-hidden /> {/* replace with your logo */}
-          <Link href="/" className="font-semibold tracking-tight text-lg">
-            Pearl Frictions
+          <div className="h-8 w-8 rounded bg-black" aria-hidden />{/* replace with logo */}
+          <Link href="/" className="text-lg font-semibold tracking-tight">
+            Pearl Frictions Inc.
           </Link>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-4">
+        <nav className="hidden items-center gap-4 md:flex">
           <Link href="/" className="text-sm hover:underline underline-offset-4">
             Home
           </Link>
 
-          {/* About: click navigates; hover/focus still shows dropdown */}
+          {/* About: clickable + hoverable dropdown */}
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                {/* DO NOT use asChild here to avoid Children.only errors */}
-                <NavigationMenuTrigger
-                  className="text-sm"
-                  onClick={(e) => {
-                    // Click goes to Company Profile
-                    e.preventDefault();
-                    router.push("/about/company-profile");
-                  }}
-                >
+              <NavigationMenuItem className="group relative">
+                {/* Trigger opens dropdown on hover/focus */}
+                <NavigationMenuTrigger className="text-sm group-hover:bg-muted/60">
                   About Us
                 </NavigationMenuTrigger>
 
+                {/* Overlay link makes whole trigger clickable to Company Profile */}
+                <Link
+                  href="/about/company-profile"
+                  className="absolute left-0 top-0 h-[var(--radix-navigation-menu-trigger-height)] w-[var(--radix-navigation-menu-trigger-width)]"
+                  aria-label="Go to Company Profile"
+                />
+
                 <NavigationMenuContent>
                   <div className="grid w-[280px] gap-2 p-4">
-                    <NavigationMenuLink asChild>
-                      <Link className="block rounded p-2 hover:bg-muted" href="/about/company-profile">
+                    <Link href="/about/company-profile" legacyBehavior passHref>
+                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
                         Company Profile
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link className="block rounded p-2 hover:bg-muted" href="/about/product-profile">
+                      </NavigationMenuLink>
+                    </Link>
+                    <Link href="/about/product-profile" legacyBehavior passHref>
+                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
                         Product Profile
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link className="block rounded p-2 hover:bg-muted" href="/about/quality">
+                      </NavigationMenuLink>
+                    </Link>
+                    <Link href="/about/quality" legacyBehavior passHref>
+                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
                         Quality
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        className="block rounded p-2 hover:bg-muted"
-                        href="/about/infrastructure-and-facilities"
-                      >
+                      </NavigationMenuLink>
+                    </Link>
+                    <Link
+                      href="/about/infrastructure-and-facilities"
+                      legacyBehavior
+                      passHref
+                    >
+                      <NavigationMenuLink className="block rounded p-2 hover:bg-muted">
                         Infrastructure &amp; Facilities
-                      </Link>
-                    </NavigationMenuLink>
+                      </NavigationMenuLink>
+                    </Link>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -89,10 +88,13 @@ export function SiteHeader() {
             Contact Us
           </Link>
 
-          {/* Phone & WhatsApp */}
-          <a href={`tel:${COMPANY.phoneE164}`} className="hidden items-center gap-2 text-sm lg:flex">
+          {/* Phone & WhatsApp (desktop) */}
+          <a
+            href={`tel:+${COMPANY.phoneMobileE164}`}
+            className="hidden items-center gap-2 text-sm lg:flex"
+          >
             <PhoneCall className="h-4 w-4" />
-            {COMPANY.phoneDisplay}
+            {COMPANY.phoneMobileDisplay}
           </a>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
             <Button size="sm" className="gap-2">
@@ -116,7 +118,7 @@ export function SiteHeader() {
                   Home
                 </Link>
 
-                {/* Default About link goes to Company Profile; show sub-links */}
+                {/* Default About link goes to Company Profile; include sublinks */}
                 <Link href="/about/company-profile" className="py-1">
                   About Us
                 </Link>
@@ -142,12 +144,15 @@ export function SiteHeader() {
                   Contact Us
                 </Link>
 
-                <a href={`tel:${COMPANY.phoneE164}`} className="mt-4 flex items-center gap-2">
+                <a
+                  href={`tel:+${COMPANY.phoneMobileE164}`}
+                  className="mt-4 flex items-center gap-2 text-sm"
+                >
                   <PhoneCall className="h-4 w-4" />
-                  {COMPANY.phoneDisplay}
+                  {COMPANY.phoneMobileDisplay}
                 </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="mt-2">
-                  <Button className="w-full gap-2">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button className="mt-2 w-full gap-2">
                     <MessageCircle className="h-4 w-4" />
                     WhatsApp
                   </Button>

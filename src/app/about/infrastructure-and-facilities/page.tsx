@@ -65,9 +65,8 @@ export default function InfrastructureFacilities() {
         </ul>
         <p className="mt-4 text-sm text-muted-foreground">
           Besides, we also pay special heed in effective packaging of our range of products so that
-          they do not get damaged in transit. We make use of asbestos-free grades of seals &amp;
-          packing to ensure compliance with environment friendly standards enforced worldwide. In
-          this way we are able to offer our clients with tamper free Cork and Asbestos Products.
+          they do not get damaged in transit. In this way we are able to offer our clients with tamper-free 
+          Cork and Asbestos Products.
         </p>
       </section>
 
