@@ -95,6 +95,13 @@ export default function ContactPage() {
                     >
                       {COMPANY.phoneMobileDisplay}
                     </a>
+                    , {" "}
+                    <a
+                      className="underline underline-offset-4"
+                      href={`tel:+${COMPANY.phoneMobileE164Alt}`}
+                    >
+                      {COMPANY.phoneMobileDisplayAlt}
+                    </a>
                   </div>
                   <div>
                     Phone (Landline):{" "}
@@ -138,6 +145,12 @@ export default function ContactPage() {
                       Call (Mobile)
                     </Button>
                   </a>
+                  <a href={`tel:+${COMPANY.phoneMobileE164Alt}`}>
+                    <Button size="sm" variant="outline" className="gap-2">
+                      <PhoneCall className="h-4 w-4" />
+                      Call (Alternate Mobile)
+                    </Button>
+                  </a>
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                     <Button size="sm" className="gap-2">
                       <MessageCircle className="h-4 w-4" />
@@ -170,7 +183,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: COMPANY.name,
-            telephone: `+${COMPANY.phoneMobileE164}`,
+            telephone: [`+${COMPANY.phoneMobileE164}`, `+${COMPANY.phoneMobileE164Alt}`],
             email: COMPANY.email,
             address: {
               "@type": "PostalAddress",

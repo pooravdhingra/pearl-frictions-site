@@ -5,6 +5,8 @@ export const COMPANY = {
   // Phones
   phoneMobileDisplay: "+91 9811006808",
   phoneMobileE164: "919811006808", // no "+" for wa.me
+  phoneMobileDisplayAlt: "+91 9811062433",
+  phoneMobileE164Alt: "919811062433",
   phoneLandlineDisplay: "+91 11 41552324",
   phoneLandlineE164: "911141552324",
 
