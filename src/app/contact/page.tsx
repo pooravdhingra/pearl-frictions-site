@@ -95,9 +95,7 @@ export default function ContactPage() {
                     >
                       {COMPANY.phoneMobileDisplay}
                     </a>
-                  </div>
-                  <div>
-                    Phone (Alternate Mobile):{" "}
+                    , {" "}
                     <a
                       className="underline underline-offset-4"
                       href={`tel:+${COMPANY.phoneMobileE164Alt}`}

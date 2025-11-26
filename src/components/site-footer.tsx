@@ -52,9 +52,7 @@ export function SiteFooter() {
             >
               {COMPANY.phoneMobileDisplay}
             </a>
-          </div>
-          <div className="text-sm">
-            Phone (Alternate Mobile):{" "}
+            , {" "}
             <a
               className="underline underline-offset-4"
               href={`tel:+${COMPANY.phoneMobileE164Alt}`}
