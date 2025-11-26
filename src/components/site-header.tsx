@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { COMPANY, WHATSAPP_LINK } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
@@ -13,9 +14,15 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         {/* Logo / Brand */}
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded bg-black" aria-hidden />{/* replace with logo */}
-          <Link href="/" className="text-lg font-semibold tracking-tight">
-            Pearl Frictions Inc.
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.svg"
+              alt="Pearl Frictions logo"
+              width={40}
+              height={40}
+              priority
+            />
+            <span className="text-lg font-semibold tracking-tight">Pearl Frictions Inc.</span>
           </Link>
         </div>
 
