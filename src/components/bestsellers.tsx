@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
@@ -7,19 +9,19 @@ type Item = { name: string; href: string; img: string };
 
 const defaultItems: Item[] = [
   {
-    name: "Antivibration Cork Sheet",
-    href: "/products/cork/antivibration-cork-sheet",
-    img: "/products/antivibration-cork-sheet/1.jpg",
-  },
-  {
-    name: "Rubberised Cork Sheet",
-    href: "/products/cork/rubberised-cork-sheet",
-    img: "/products/rubberised-cork-sheet/1.jpg",
-  },
-  {
-    name: "Flexible Graphite Sheet (Rolls)",
+    name: "Flexible Graphite Rolls",
     href: "/products/graphite/flexible-graphite-sheet",
     img: "/products/flexible-graphite-sheet/1.jpg",
+  },
+  {
+    name: "Cork Granules",
+    href: "/products/cork/cork-granules",
+    img: "/products/cork-granules/1.jpg",
+  },
+  {
+    name: "Composite Mineral Fiber",
+    href: "/products/non-asbestos-fibers/composite-mineral-fiber",
+    img: "/products/composite-mineral-fiber/1.jpg",
   },
 ];
 
@@ -34,10 +36,10 @@ export function Bestsellers({ items = defaultItems }: { items?: Item[] }) {
           </Link>
         </div>
 
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
           {items.map((p) => (
-            <Link key={p.href} href={p.href}>
-              <Card className="overflow-hidden hover:shadow-lg transition">
+            <Link key={p.href} href={p.href} className="block">
+              <Card className="overflow-hidden transition hover:shadow-lg">
                 <div className="relative aspect-[4/3]">
                   <Image src={p.img} alt={p.name} fill className="object-cover" />
                 </div>

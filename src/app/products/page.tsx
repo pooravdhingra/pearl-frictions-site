@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bestsellers } from "@/components/bestsellers";
 import { Card } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 
@@ -35,8 +34,6 @@ const categories = [
 export default function ProductsIndex() {
   return (
     <>
-      <Bestsellers />
-
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Products" }]} />
 
       <section className="mx-auto max-w-7xl px-4 py-14">
