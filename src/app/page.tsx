@@ -30,13 +30,19 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex gap-3">
                 <Link href="/products">
-                  <Button size="lg" variant="default">View Products</Button>
+                  <Button
+                    size="lg"
+                    variant="default"
+                    className="px-8 py-3 text-lg hover:scale-105 hover:shadow-lg"
+                  >
+                    View Products
+                  </Button>
                 </Link>
                 <Link href="/contact">
                   <Button
                     size="lg"
                     variant="secondary"
-                    className="bg-white/90 text-black hover:bg-white"
+                    className="bg-white/90 text-black px-8 py-3 text-lg hover:bg-white hover:scale-105 hover:shadow-lg"
                   >
                     Contact Sales
                   </Button>
