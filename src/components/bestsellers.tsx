@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -43,7 +43,6 @@ const defaultItems: Item[] = [
 
 export function Bestsellers({ items = defaultItems }: { items?: Item[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [snapWidth, setSnapWidth] = useState(0);
 
   const scroll = (direction: "left" | "right") => {
     const container = scrollRef.current;
@@ -55,35 +54,6 @@ export function Bestsellers({ items = defaultItems }: { items?: Item[] }) {
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    const firstItem = container.firstElementChild as HTMLElement | null;
-    const gap = Number.parseFloat(getComputedStyle(container).columnGap || "0");
-    const itemWidth = firstItem?.offsetWidth ?? 0;
-    const calculatedSnapWidth = itemWidth + gap;
-    if (!calculatedSnapWidth) return;
-
-    setSnapWidth(calculatedSnapWidth);
-    container.scrollLeft = calculatedSnapWidth * items.length;
-
-    const handleScroll = () => {
-      if (!snapWidth) return;
-      const maxOffset = snapWidth * items.length * 2;
-      if (container.scrollLeft <= snapWidth / 2) {
-        container.scrollLeft += snapWidth * items.length;
-      } else if (container.scrollLeft >= maxOffset - snapWidth / 2) {
-        container.scrollLeft -= snapWidth * items.length;
-      }
-    };
-
-    container.addEventListener("scroll", handleScroll);
-    return () => container.removeEventListener("scroll", handleScroll);
-  }, [items.length, snapWidth]);
-
-  const infiniteItems = [...items, ...items, ...items];
 
   return (
     <section className="bg-muted/30">
@@ -101,9 +71,9 @@ export function Bestsellers({ items = defaultItems }: { items?: Item[] }) {
             className="flex gap-6 overflow-x-auto scrollbar-none"
             style={{ scrollSnapType: "x mandatory" }}
           >
-            {infiniteItems.map((p, idx) => (
+            {items.map((p) => (
               <Link
-                key={`${p.href}-${idx}`}
+                key={p.href}
                 href={p.href}
                 className="flex-none w-full sm:w-[calc((100%-3rem)/3)]"
                 style={{ scrollSnapAlign: "start" }}
