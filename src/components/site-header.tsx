@@ -4,7 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { COMPANY, WHATSAPP_LINK } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { PhoneCall, Menu, MessageCircle } from "lucide-react";
 
 export function SiteHeader() {
@@ -71,23 +76,31 @@ export function SiteHeader() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
-              <div className="mt-6 flex flex-col gap-3 px-2">
-                <Link href="/" className={mobileNavItemClass}>
-                  Home
-                </Link>
+            <SheetContent side="right" className="w-72 pt-12">
+              <div className="flex flex-col gap-3 px-2">
+                <SheetClose asChild>
+                  <Link href="/" className={mobileNavItemClass}>
+                    Home
+                  </Link>
+                </SheetClose>
 
-                <Link href="/products" className={mobileNavItemClass}>
-                  Products
-                </Link>
+                <SheetClose asChild>
+                  <Link href="/products" className={mobileNavItemClass}>
+                    Products
+                  </Link>
+                </SheetClose>
 
-                <Link href="/about/company-profile" className={mobileNavItemClass}>
-                  About Us
-                </Link>
+                <SheetClose asChild>
+                  <Link href="/about/company-profile" className={mobileNavItemClass}>
+                    About Us
+                  </Link>
+                </SheetClose>
 
-                <Link href="/contact" className={mobileNavItemClass}>
-                  Contact Us
-                </Link>
+                <SheetClose asChild>
+                  <Link href="/contact" className={mobileNavItemClass}>
+                    Contact Us
+                  </Link>
+                </SheetClose>
 
                 <a
                   href={`tel:+${COMPANY.phoneMobileE164}`}
