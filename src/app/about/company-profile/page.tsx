@@ -53,26 +53,30 @@ export default function CompanyProfile() {
       <section className="mt-10">
         <h2 className="text-xl font-semibold tracking-tight">Basic Information - Factsheet</h2>
         <div className="mt-4 overflow-hidden rounded-xl ring-1 ring-black/10">
-          <table className="w-full text-sm">
-            <tbody className="[&_tr:nth-child(even)]:bg-muted/40">
-              <tr><td className="p-3 font-medium w-56">Nature of Business</td><td className="p-3">Importer - Trader</td></tr>
-              <tr><td className="p-3 font-medium">Additional Business</td><td className="p-3">Wholesale Business; Bonded Warehouse; Factory / Manufacturing</td></tr>
-              <tr><td className="p-3 font-medium">Company CEO</td><td className="p-3">Gaurav Dhingra</td></tr>
-              <tr><td className="p-3 font-medium">Registered Address</td><td className="p-3">26/181-C, Farid Puri, West Patel Nagar, New Delhi - 110008, Delhi, India</td></tr>
-              <tr><td className="p-3 font-medium">Total Number of Employees</td><td className="p-3">11 to 25 People</td></tr>
-              <tr><td className="p-3 font-medium">Annual Turnover</td><td className="p-3">5 Cr - 10 Cr</td></tr>
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-sm">
+              <tbody className="[&_tr:nth-child(even)]:bg-muted/40">
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Nature of Business</td><td className="p-3 leading-relaxed">Importer - Trader</td></tr>
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Additional Business</td><td className="p-3 leading-relaxed">Wholesale Business; Bonded Warehouse; Factory / Manufacturing</td></tr>
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Company CEO</td><td className="p-3 leading-relaxed">Gaurav Dhingra</td></tr>
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Registered Address</td><td className="p-3 leading-relaxed">26/181-C, Farid Puri, West Patel Nagar, New Delhi - 110008, Delhi, India</td></tr>
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Total Number of Employees</td><td className="p-3 leading-relaxed">11 to 25 People</td></tr>
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Annual Turnover</td><td className="p-3 leading-relaxed">5 Cr - 10 Cr</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <h3 className="mt-8 text-lg font-semibold tracking-tight">Packaging / Payment &amp; Shipment</h3>
         <div className="mt-3 overflow-hidden rounded-xl ring-1 ring-black/10">
-          <table className="w-full text-sm">
-            <tbody className="[&_tr:nth-child(even)]:bg-muted/40">
-              <tr><td className="p-3 font-medium w-56">Customized Packaging</td><td className="p-3">Yes</td></tr>
-              <tr><td className="p-3 font-medium">Payment Mode</td><td className="p-3">Cash; Credit Card; Cheque; Online</td></tr>
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-sm">
+              <tbody className="[&_tr:nth-child(even)]:bg-muted/40">
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Customized Packaging</td><td className="p-3 leading-relaxed">Yes</td></tr>
+                <tr><td className="min-w-[11rem] p-3 font-medium align-top">Payment Mode</td><td className="p-3 leading-relaxed">Cash; Credit Card; Cheque; Online</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 

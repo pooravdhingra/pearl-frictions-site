@@ -47,11 +47,11 @@ function Stars({ value = 4.6 }) {
 export function Testimonials() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <div className="flex items-end justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <h2 className="text-2xl font-semibold tracking-tight">Testimonials</h2>
         <Stars value={4.6} />
       </div>
-      <div className="mt-6 grid gap-6 md:grid-cols-3">
+      <div className="mt-6 grid gap-4 sm:gap-6 md:grid-cols-3">
         {testimonials.map((t, idx) => (
           <Card key={idx} className="p-5">
             <p className="text-sm leading-relaxed">“{t.quote}”</p>

@@ -29,14 +29,14 @@ export function Bestsellers({ items = defaultItems }: { items?: Item[] }) {
   return (
     <section className="bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 py-14">
-        <div className="flex items-end justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-2xl font-semibold tracking-tight">Bestselling Products</h2>
           <Link href="/products">
             <Button variant="outline">View All</Button>
           </Link>
         </div>
 
-        <div className="mt-6 grid gap-6 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {items.map((p) => (
             <Link key={p.href} href={p.href} className="block">
               <Card className="overflow-hidden transition hover:shadow-lg">
