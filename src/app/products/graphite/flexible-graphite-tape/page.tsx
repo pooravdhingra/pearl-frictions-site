@@ -8,14 +8,13 @@ const images = [
 ];
 
 const rows: [string, string][] = [
-  ["Thickness", "0.5 mm"],
+  ["Thickness", "0.5 mm - 1.5 mm"],
   ["Packaging Type", "In rolls"],
   ["Color", "Black"],
   ["Material", "Graphite"],
   ["Usage / Application", "Automotive gaskets, spiral wound gaskets"],
-  ["Roll Length", "50 metres"],
   ["Width", "3.7mm, 5.5mm, 12mm, 19mm"],
-  ["Minimum Order Quantity", "100 piece"],
+  ["Minimum Order Quantity", "100 kgs"],
 ];
 
 export default function FlexibleGraphiteTape() {

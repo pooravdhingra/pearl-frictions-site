@@ -3,16 +3,15 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 
 const images = [
   "/products/gasket-jointing-sheets/1.jpg",
-  "/products/gasket-jointing-sheets/2.jpg",
   "/products/gasket-jointing-sheets/3.jpg",
 ];
 
 const rows: [string, string][] = [
-  ["Thickness", "0.40 mm"],
+  ["Thickness", "0.4 mm - 6 mm"],
   ["Temperature", "550°C"],
-  ["Size", "1500mm x 1500mm, 1000mm x 1000mm"],
+  ["Size", "1500mm x 1500mm, 1000mm x 1000mm, 1500mm x 4500mm"],
   ["Max Operating Pressure", "100 bar"],
-  ["Material", "Asbestos"],
+  ["Material", "Asbestos & Non-Asbestos"],
   ["Brand", "Pearl"],
   ["Color", "Red, Black, Green, Yellow"],
   ["Usage / Application", "Industrial use"],

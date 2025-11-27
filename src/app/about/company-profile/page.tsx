@@ -11,7 +11,7 @@ export default function CompanyProfile() {
         <div className="p-6 sm:p-8">
           <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">Company Profile</h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            Established in 1962, Pearl Industries (New Delhi) manufactures and exports quality cork,
+            Established in 1962, Pearl Frictions Inc. (New Delhi) manufactures and exports quality cork,
             graphite and related sealing products for engineering &amp; automotive applications.
           </p>
         </div>
@@ -20,7 +20,7 @@ export default function CompanyProfile() {
       {/* Intro — single column continuous paragraph */}
       <section className="mt-10 text-sm leading-7 text-muted-foreground">
         <p>
-          Established in the year 1962, <strong>Pearl Industries, New Delhi</strong> is engaged in importing, 
+          Established in the year 1962, <strong>Pearl Frictions Inc., New Delhi</strong> is engaged in importing, 
           manufacturing and exporting quality Cork, Graphite, Asbestos and Non-Asbestos Fiber Products. Our range includes Ceramic
           Packings, Cellulose Paper, Spiral Wound Gaskets, Cylinder Head Gaskets, Ceramic Yarn,
           Ceramic Rope, Ceramic Cloth, Ceramic Tape, Cellulose Paper, Ceramic Sealings, Asbestos

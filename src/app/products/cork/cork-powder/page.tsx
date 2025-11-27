@@ -8,7 +8,7 @@ const images = [
 ];
 
 const rows: [string, string][] = [
-  ["Density", "55 Kg/cm³"],
+  ["Size", "40 mesh to 200 mesh"],
   ["Material", "Cork wood"],
   ["Color", "Natural light brown"],
   ["Use", "Industrial"],

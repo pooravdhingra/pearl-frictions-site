@@ -8,7 +8,6 @@ const images = [
 ];
 
 const rows: [string, string][] = [
-  ["Length of Strands", "12 mm"],
   ["Usage / Application", "Filling / reinforcement material"],
   ["Color", "White"],
   ["Material", "E-glass"],

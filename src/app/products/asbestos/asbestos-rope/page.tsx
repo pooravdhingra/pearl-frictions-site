@@ -15,7 +15,6 @@ const rows: [string, string][] = [
   ["Color", "Natural"],
   ["Material", "Asbestos"],
   ["Condition", "New"],
-  ["Breaking Temperature", "480°C"],
   ["Grade Index", "Standard Grade"],
   ["Packaging Type", "Roll"],
   ["Packing Type", "Roll"],

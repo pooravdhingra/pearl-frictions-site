@@ -9,11 +9,10 @@ const images = [
 
 const rows: [string, string][] = [
   ["Application / Uses", "Automotive"],
-  ["Acrylonitrile Content", "38"],
-  ["Grade", "XL 38.43, 34.82, 34.52"],
+  ["Acrylonitrile Content", "34-38"],
+  ["Grade", "Cross-linked and Linear Both"],
   ["Brand", "Lanxess, Arlanxeo, Zeon"],
   ["Packaging Type", "Cartons"],
-  ["Viscosity", "50–80"],
   ["Material", "NBR Rubber Powder"],
   ["Color", "Off White"],
   ["Condition", "New"],

@@ -13,7 +13,7 @@ const rows: [string, string][] = [
   ["Finishing", "Black finish"],
   ["Material", "Graphite flakes"],
   ["Thickness", "0.3mm to 1mm"],
-  ["Size", "1 metre"],
+  ["Width", "1 metre"],
   ["Color", "Black"],
   ["Use", "Automotive & Industrial"],
   ["Minimum Order Quantity", "100 Kg"],

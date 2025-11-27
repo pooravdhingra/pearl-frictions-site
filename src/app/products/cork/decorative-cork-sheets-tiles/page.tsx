@@ -19,7 +19,6 @@ const applications = [
 
 const rows: [string, string][] = [
   ["Finish", "Glossy"],
-  ["Size / Dimension", "300mm x 600mm, 600mm x 900mm"],
   ["Shape", "Rectangular"],
   ["Surface Treatment", "Polished"],
   ["Thickness", "3mm, 5mm"],

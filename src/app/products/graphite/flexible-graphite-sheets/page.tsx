@@ -17,7 +17,7 @@ const details: [string, string][] = [
   ["Density", "1.0 g/cm³"],
   ["Purity", "99%"],
   ["Use", "Industrial"],
-  ["Minimum Order Quantity", "50 pcs"],
+  ["Minimum Order Quantity", "100 kgs"],
 ];
 
 const mainProperties = [

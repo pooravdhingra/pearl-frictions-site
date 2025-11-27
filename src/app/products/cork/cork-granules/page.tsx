@@ -8,7 +8,6 @@ const images = [
 ];
 
 const rows: [string, string][] = [
-  ["Thickness", "1.5 mm"],
   ["Density", "65 Kg/cm³"],
   ["Size", "0.5 to 6 mm"],
   ["Color", "Natural brown"],

@@ -9,7 +9,7 @@ const images = [
 
 const rows: [string, string][] = [
   ["Color", "Natural brown"],
-  ["Shape", "Conical"],
+  ["Shape", "Conical, Cylindrical"],
   ["Material", "Wooden"],
   ["Condition", "New"],
   ["Use", "Industrial"],

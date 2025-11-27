@@ -10,11 +10,10 @@ const images = [
 const rows: [string, string][] = [
   ["Usage / Application", "Industrial"],
   ["Material", "Asbestos"],
-  ["Size", `1/2" to 4"`],
   ["Color", "White"],
-  ["Brand", "PEARL, CHARMINAR"],
+  ["Brand", "PEARL"],
   ["Packaging Type", "Roll"],
-  ["Working Temperature", "400°C"],
+  ["Working Temperature", "500°C"],
   ["Type", "Webbing tape"],
   ["Usage", "Industrial use"],
   ["Width", "12.5mm to 150mm"],

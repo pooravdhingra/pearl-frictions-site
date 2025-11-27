@@ -8,7 +8,6 @@ const images = [
 ];
 
 const rows: [string, string][] = [
-  ["Thickness", "50 mm"],
   ["Material", "Cork"],
   ["Product Type", "Cork Sheet"],
   ["Size/Dimension", "600mm X 900mm"],
@@ -28,14 +27,14 @@ export default function AntivibrationCorkSheet() {
           { label: "Home", href: "/" },
           { label: "Products", href: "/products" },
           { label: "Cork", href: "/products/cork" },
-          { label: "Antivibration Cork Sheet" },
+          { label: "Anti-Vibration Cork Sheet" },
         ]}
       />
 
       <div className="mt-4 grid gap-8 md:grid-cols-2">
         <ProductGallery images={images} />
         <div>
-          <h1 className="text-3xl font-semibold tracking-tight">Antivibration Cork Sheet</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">Anti-Vibration Cork Sheet</h1>
           <p className="mt-3 text-sm text-muted-foreground">
             Composition Cork is made from selected granulated cork, bonded using synthetic or natural
             binders and additives. Granules are carefully selected to suit user requirements. Anti-Vibration

@@ -14,9 +14,7 @@ const rows: [string, string][] = [
   ["Max withstanding temperature", "500°C"],
   ["Packing type", "As per demand / standard"],
   ["Packaging type", "Roll"],
-  ["Temperature", "480°C (continuous)"],
   ["Shape", "In roll form"],
-  ["Brand", "CHARMINAR"],
   ["Country of Origin", "Made in India"],
   ["Minimum Order Quantity", "100 Kilogram"],
 ];

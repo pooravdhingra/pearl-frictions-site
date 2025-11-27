@@ -5,11 +5,11 @@ const images = ["/products/composite-mineral-fiber/1.jpg"];
 
 const rows: [string, string][] = [
   ["Packaging Type", "Bag"],
-  ["Color", "Grey"],
+  ["Color", "Grey, White"],
   ["Features", "Imported composite mineral fibre"],
   ["Packaging Size", "25 Kgs"],
   ["Brand", "Pearl"],
-  ["Minimum Order Quantity", "50 Piece"],
+  ["Minimum Order Quantity", "100 kgs"],
 ];
 
 export default function CompositeMineralFiber() {

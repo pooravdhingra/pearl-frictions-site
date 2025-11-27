@@ -8,14 +8,13 @@ const images = [
 ];
 
 const rows: [string, string][] = [
-  ["Size", "6mm to 25mm"],
-  ["Diameter", "6mm–25mm"],
+  ["Size", "6mm to 50mm"],
   ["Color", "Black"],
   ["Material", "Graphite"],
-  ["Length", "1000 mm / reel"],
+  ["Packing", "5kg / coil"],
   ["Condition", "New"],
   ["Usage / Application", "Industrial use"],
-  ["Minimum Order Quantity", "100 piece"],
+  ["Minimum Order Quantity", "100 kgs"],
 ];
 
 export default function FlexibleGraphitePacking() {

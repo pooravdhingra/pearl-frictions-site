@@ -8,7 +8,6 @@ const images = [
 ];
 
 const rows: [string, string][] = [
-  ["Size (L x B)", "900 mm X 600 mm"],
   ["Size/Dimension", "600mm X 900mm, 900mm X 900mm"],
   ["Thickness Available", "1.0mm to 25mm"],
   ["Material", "Cork & Rubber"],
