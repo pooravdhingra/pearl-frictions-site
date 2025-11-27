@@ -4,10 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { COMPANY, WHATSAPP_LINK } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { PhoneCall, Menu, MessageCircle } from "lucide-react";
 
 export function SiteHeader() {
+
+  const mobileNavItemClass =
+    "mx-auto flex w-full max-w-[260px] items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-base font-semibold text-primary shadow-sm transition hover:border-primary hover:bg-primary/10";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
@@ -68,51 +76,47 @@ export function SiteHeader() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
-              <div className="mt-6 flex flex-col gap-3">
-                <Link href="/" className="py-1">
-                  Home
-                </Link>
+            <SheetContent side="right" className="w-72 pt-12">
+              <div className="flex flex-col gap-3 px-2">
+                <SheetClose asChild>
+                  <Link href="/" className={mobileNavItemClass}>
+                    Home
+                  </Link>
+                </SheetClose>
 
-                <Link href="/products" className="py-1">
-                  Products
-                </Link>
+                <SheetClose asChild>
+                  <Link href="/products" className={mobileNavItemClass}>
+                    Products
+                  </Link>
+                </SheetClose>
 
-                {/* Default About link goes to Company Profile; include sublinks */}
-                <Link href="/about/company-profile" className="py-1">
-                  About Us
-                </Link>
-                <div className="ml-3 flex flex-col text-sm">
-                  <Link href="/about/company-profile" className="py-1">
-                    — Company Profile
+                <SheetClose asChild>
+                  <Link href="/about/company-profile" className={mobileNavItemClass}>
+                    About Us
                   </Link>
-                  <Link href="/about/product-profile" className="py-1">
-                    — Product Profile
-                  </Link>
-                  <Link href="/about/quality" className="py-1">
-                    — Quality
-                  </Link>
-                  <Link href="/about/infrastructure-and-facilities" className="py-1">
-                    — Infrastructure &amp; Facilities
-                  </Link>
-                </div>
+                </SheetClose>
 
-                <Link href="/contact" className="py-1">
-                  Contact Us
-                </Link>
+                <SheetClose asChild>
+                  <Link href="/contact" className={mobileNavItemClass}>
+                    Contact Us
+                  </Link>
+                </SheetClose>
 
                 <a
                   href={`tel:+${COMPANY.phoneMobileE164}`}
-                  className="mt-4 flex items-center gap-2 text-sm"
+                  className={`${mobileNavItemClass} mt-2 text-sm font-semibold`}
                 >
                   <PhoneCall className="h-4 w-4" />
                   {COMPANY.phoneMobileDisplay}
                 </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button className="mt-2 w-full gap-2">
-                    <MessageCircle className="h-4 w-4" />
-                    WhatsApp
-                  </Button>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={mobileNavItemClass}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  WhatsApp
                 </a>
               </div>
             </SheetContent>
