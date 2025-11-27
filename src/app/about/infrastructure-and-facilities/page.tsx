@@ -29,8 +29,7 @@ export default function InfrastructureFacilities() {
         <p className="mt-3 text-sm text-muted-foreground">
           We have a state-of-the-art manufacturing unit located at Delhi (India). Our unit is
           equipped with all the latest machines and testing equipment. This unit is supervised by
-          experienced professionals, who enable us to successfully manufacture our Asbestos and Cork
-          Products in bulk within the stipulated time frame. Some of the prominent features of our
+          experienced professionals, who enable us to successfully manufacture our products in bulk within the stipulated time frame. Some of the prominent features of our
           manufacturing unit include:
         </p>
         <ul className="mt-3 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
@@ -52,9 +51,9 @@ export default function InfrastructureFacilities() {
       <section className="mt-10">
         <h2 className="text-xl font-semibold tracking-tight">Warehousing and Packaging</h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          Our warehousing unit has high storage capacity to stock our range of Asbestos and Cork
-          Products in bulk quantity. It has been internally divided into several sections to
-          facilitate an easy accommodation, access and retrieval of our Cork and Asbestos Products.
+          Our warehousing unit has high storage capacity to stock our range of
+          products in bulk quantity. It has been internally divided into several sections to
+          facilitate an easy accommodation, access and retrieval of our products.
           Important characteristics of our warehouse include:
         </p>
         <ul className="mt-3 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
@@ -66,7 +65,7 @@ export default function InfrastructureFacilities() {
         <p className="mt-4 text-sm text-muted-foreground">
           Besides, we also pay special heed in effective packaging of our range of products so that
           they do not get damaged in transit. In this way we are able to offer our clients with tamper-free 
-          Cork and Asbestos Products.
+          products.
         </p>
       </section>
 
@@ -78,7 +77,7 @@ export default function InfrastructureFacilities() {
           of experienced research experts. This department is equipped with all the latest tools and
           instruments assisting us in developing our Cork and Asbestos Products in line with the
           latest advancements in the industry. Our research experts also aid us in enhancing the
-          production of Cork and Asbestos Products. Our R&amp;D department conducts research on the
+          production of products. Our R&amp;D department conducts research on the
           following factors:
         </p>
         <ul className="mt-3 list-disc pl-5 text-sm text-muted-foreground space-y-1">

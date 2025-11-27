@@ -20,9 +20,8 @@ export default function Quality() {
       <section className="mt-10">
         <h2 className="text-xl font-semibold tracking-tight">Quality Assurance</h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          We follow strict quality control policies to give our customers the quality Asbestos and
-          Cork Products. We have gained ISO 9001:2000 certified for the quality of our range of Cork
-          and Asbestos Products. Our adherence to ethical business practices and qualitative approach
+          We follow strict quality control policies to give our customers quality products. We have gained ISO 9001:2000 certified for the quality of 
+          our range of products. Our adherence to ethical business practices and qualitative approach
           has given us an edge over the other leading organizations. Right from the initial stage of
           procurement of raw material till the final delivery of the consignment, we undertake
           stringent quality control measures.

@@ -19,7 +19,7 @@ export default function ProductProfile() {
       {/* Body */}
       <section className="mt-10 space-y-4 text-sm leading-7 text-muted-foreground">
         <p>
-          We are one of the leading manufactures and exporters of quality Cork and Asbestos Products.
+          We are one of the leading manufactures and exporters of quality Cork, Graphite, Asbestos and Non-Asbestos Fiber Products.
           Our range includes ceramic packings, cellulose paper, spiral wound gaskets, cylinder head
           gaskets, ceramic yarn, ceramic rope, ceramic cloth, ceramic tape, cellulose paper, ceramic
           sealings, asbestos fiber, glass fiber, graphite sheet, asbestos millboard sheet, asbestos
