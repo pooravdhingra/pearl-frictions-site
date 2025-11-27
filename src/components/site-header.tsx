@@ -9,6 +9,9 @@ import { PhoneCall, Menu, MessageCircle } from "lucide-react";
 
 export function SiteHeader() {
 
+  const mobileNavItemClass =
+    "mx-auto flex w-full max-w-[260px] items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-base font-semibold text-primary shadow-sm transition hover:border-primary hover:bg-primary/10";
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
@@ -69,50 +72,38 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
-              <div className="mt-6 flex flex-col gap-3">
-                <Link href="/" className="py-1">
+              <div className="mt-6 flex flex-col gap-3 px-2">
+                <Link href="/" className={mobileNavItemClass}>
                   Home
                 </Link>
 
-                <Link href="/products" className="py-1">
+                <Link href="/products" className={mobileNavItemClass}>
                   Products
                 </Link>
 
-                {/* Default About link goes to Company Profile; include sublinks */}
-                <Link href="/about/company-profile" className="py-1">
+                <Link href="/about/company-profile" className={mobileNavItemClass}>
                   About Us
                 </Link>
-                <div className="ml-3 flex flex-col text-sm">
-                  <Link href="/about/company-profile" className="py-1">
-                    — Company Profile
-                  </Link>
-                  <Link href="/about/product-profile" className="py-1">
-                    — Product Profile
-                  </Link>
-                  <Link href="/about/quality" className="py-1">
-                    — Quality
-                  </Link>
-                  <Link href="/about/infrastructure-and-facilities" className="py-1">
-                    — Infrastructure &amp; Facilities
-                  </Link>
-                </div>
 
-                <Link href="/contact" className="py-1">
+                <Link href="/contact" className={mobileNavItemClass}>
                   Contact Us
                 </Link>
 
                 <a
                   href={`tel:+${COMPANY.phoneMobileE164}`}
-                  className="mt-4 flex items-center gap-2 text-sm"
+                  className={`${mobileNavItemClass} mt-2 text-sm font-semibold`}
                 >
                   <PhoneCall className="h-4 w-4" />
                   {COMPANY.phoneMobileDisplay}
                 </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button className="mt-2 w-full gap-2">
-                    <MessageCircle className="h-4 w-4" />
-                    WhatsApp
-                  </Button>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={mobileNavItemClass}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  WhatsApp
                 </a>
               </div>
             </SheetContent>
